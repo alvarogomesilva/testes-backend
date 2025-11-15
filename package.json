@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "node dist/server.js",
     "build": "tsc",
     "postinstall": "prisma generate",
     "dev": "tsx watch --env-file=.env src/server.ts",
