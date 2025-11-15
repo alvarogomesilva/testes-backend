@@ -62,7 +62,7 @@ export const getAllProducts = async (filters: ProductFilters) => {
 
     return products.map(product => ({
         ...product,
-        image: product.images[0] ? `media/products/${product.images[0].url}` : null,
+        image: product.images[0] ? `${product.images[0].url}` : null,
         images: undefined
     }));
 }
@@ -85,7 +85,7 @@ export const getProduct = async (id: number) => {
     return {
         ...product,
         images: product.images.length > 0 ?
-            product.images.map(img => `media/products/${img.url}`) :
+            product.images.map(img => `${img.url}`) :
             []
     }
 }

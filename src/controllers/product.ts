@@ -26,7 +26,7 @@ export const getProducts: RequestHandler = async (req, res) => {
 
     const productsWithAbsoluteUrl = products.map(product => ({
         ...product,
-        image: product.image ? getAbsoluteImageUrl(product.image) : null,
+        image: product.image ? product.image : null,
         liked: false // TODO: Once have like funcionallity, fetch this.
     }))
 
@@ -50,7 +50,7 @@ export const getOneProduct: RequestHandler = async (req, res) => {
 
     const productWithAbsoluteImages = {
         ...product,
-        images: product.images.map(img => getAbsoluteImageUrl(img))
+        images: product.images.map(img => img)
     }
 
     // Getting category

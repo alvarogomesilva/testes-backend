@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "",
+    "build": "tsc",
+    "postinstall": "prisma generate",
     "dev": "tsx watch --env-file=.env src/server.ts",
     "db:seed": "prisma db seed"
   },
